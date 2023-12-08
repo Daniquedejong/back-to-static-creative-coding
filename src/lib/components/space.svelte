@@ -1,14 +1,21 @@
 <script>
 	import { onMount } from "svelte";
 
-
+   // Wanneer de pagina helemaal klaar is met laden
     onMount(() => {
 
+    // Vind het element met de ID 'cursor' en 'body'
     let cursor = document.querySelector('#cursor');
     let body = document.querySelector('body');
+
+    // Voeg een 'mousemove'-event toe aan het document
     document.addEventListener('mousemove', (e) => {
+
+    // Pas de achtergrondpositie van de body aan op basis van de muispositie voor een parallax-effect
     body.style.backgroundPositionX = e.pageX/-4 + 'px';
     body.style.backgroundPositionY = e.pageY/-4 + 'px';
+
+    // Verplaats de aangepaste cursor naar de positie van de muis
     cursor.style.top = e.pageY + 'px';
     cursor.style.left = e.pageX + 'px';
 })
