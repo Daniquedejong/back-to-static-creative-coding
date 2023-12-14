@@ -5,19 +5,19 @@
     onMount(() => {
 
     // Vind het element met de ID 'cursor' en 'body'
-    let cursor = document.querySelector('#cursor');
-    let body = document.querySelector('body');
+    let cursor1 = document.querySelector('#cursor1');
+    let footer = document.querySelector('footer');
 
     // Voeg een 'mousemove'-event toe aan het document
     document.addEventListener('mousemove', (e) => {
 
     // Pas de achtergrondpositie van de body aan op basis van de muispositie voor een parallax-effect
-    body.style.backgroundPositionX = e.pageX/-4 + 'px';
-    body.style.backgroundPositionY = e.pageY/-4 + 'px';
+    footer.style.backgroundPositionX = e.pageX/-4 + 'px';
+    footer.style.backgroundPositionY = e.pageY/-4 + 'px';
 
     // Verplaats de aangepaste cursor naar de positie van de muis
-    cursor.style.top = e.pageY + 'px';
-    cursor.style.left = e.pageX + 'px';
+    cursor1.style.top = e.pageY + 'px';
+    cursor1.style.left = e.pageX + 'px';
 })
 
     });
@@ -26,7 +26,7 @@
 </script>
 
 <section>
-<body>
+    <footer>
     
       <nav class="footer">
     
@@ -51,9 +51,9 @@
     
       </nav>
 
-      <div id="cursor"></div>
+      <div id="cursor1"></div>
 
-    </body>
+    </footer>
 </section>
 
 <style>
@@ -64,14 +64,14 @@
         --vtDarkBlue: #090940;
     }
 
-    body {
+    section {
         background-image: linear-gradient(to right, #333 1px,
         transparent 1px), linear-gradient(to bottom, #333 1px,
         transparent 1px);
         background-size: 40px 40px;
     }
 
-    #cursor {
+    #cursor1 {
         position: fixed;
         width: 25px;
         height: 25px;
@@ -84,7 +84,7 @@
         animation: animate 5s linear infinite;
     }
 
-    #cursor::before {
+    #cursor1::before {
         content: '';
         position: absolute;
         left: -2.5px;
@@ -95,7 +95,11 @@
         transform: rotate(315deg);
     }
 
-    body:hover #cursor {
+    footer:hover {
+        cursor: none;
+    }
+
+    footer:hover #cursor1 {
         transform: translate(-1px, 5px)rotate(15deg) scale(1);
     }
 
