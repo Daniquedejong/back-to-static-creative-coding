@@ -87,9 +87,10 @@ import { onMount } from 'svelte';
 </section>
 
 <style>
-	* {
-		/* border: solid 1px red; */
-	}
+
+	/* * {
+		border: solid 1px red;
+	} */
 
 	/*--ROOTS--*/
 	:root {
@@ -145,6 +146,7 @@ import { onMount } from 'svelte';
 	a {
 		text-decoration: none;
 	}
+	
  	/*--CAROUSEL--*/
 	.container {
 		position: relative;
