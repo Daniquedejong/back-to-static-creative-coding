@@ -3,7 +3,9 @@
     </script>
 
     <section>
+         <!-- SVG-element met meerdere paden -->
     	<svg viewBox="45 -300 1000 600" width="110%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <!-- Verschillende path-elementen die lijnen definiëren -->
             <path
         d="M50 0 Q 100 -50 200 0 Q 300 50 400 0 Q 500 -50 600 0 Q 700 50 800 0 Q 900 -50 950 0"
         stroke="purple"
@@ -42,21 +44,22 @@
     />
     	</svg>
     
+        <!-- Lijst (ul) met list items (li) die verschillende animaties hebben -->
         <ul>
-        <li aria-label="jump jump">
+        <li aria-label="flower">
             <div><img src="/assets/clipart120952.png" class="flower" alt="flower" /></div>
           </li>
 
-          <li aria-label="yay">
+          <li aria-label="text">
             <h2 class="text"><span>R</span><span>E</span><span>T</span><span>R</span><span>O</span><span>-</span>
                 <span>S</span><span>T</span><span>U</span><span>F</span><span>F</span></h2> 
           </li>
 
-          <li aria-label="wait for it">
+          <li aria-label="jump">
             <div class="jumpy"><img src="\assets\gamer-svgrepo-com.svg" class="jumpy" alt="jumpy"></div>
           </li>
 
-        <li aria-label="op en neer">
+        <li aria-label="rocket">
             <div><img src="\assets\r-is-for-rocket.svg" class="rocket" alt="rocket"></div>
         </li>
 
@@ -79,19 +82,20 @@
     	.flower {
             position: absolute;
     		width: 10em;
-            margin-top: -35em;
+            margin-top: -42em;
+            margin-left: 1em;
             animation-name: none;
     	}
 
         .text {
-            margin-left: 20em;
-            margin-top: -32em;
+            margin-left: 27em;
+            margin-top: -37em;
             animation-name: none;
         }
 
         .jumpy {
             width: 10em;
-            margin-left: 18em;
+            margin-left: 20em;
             margin-top: 4em;
             animation-name: none;
         }
@@ -99,18 +103,19 @@
         .rocket {
             width: 10em;
             margin-top: -6em;
-            margin-left: 60em;
+            margin-left: 70em;
             animation-name: none;
-            /* transform: rotateY(180deg); */
         }
     
+          /* Animatie voor de lijnen in de SVG */
     	path {
     		stroke-dasharray: 150 2;
     		stroke-dashoffset: 1000;
-    		animation: dash 60s linear alternate infinite;
+    		animation: rainbow 60s linear alternate infinite;
     	}
     
-    	@keyframes dash {
+        /* Keyframes voor de SVG-lijnanimatie */
+    	@keyframes rainbow {
     		from {
     			stroke-dashoffset: 700;
     		}
@@ -119,11 +124,10 @@
     		}
     	}
 
-        
-/*************/
-/* jump-jump */
-/*************/
-@keyframes jump-jump-animation {
+/* Verschillende keyframe-animaties voor list items met specifieke aria-labels */
+
+ /* Selector en animatie voor 'flower' element */
+@keyframes flower-animation {
   0% {
         translate:0em 0em;
 		animation-timing-function:ease-out;
@@ -139,20 +143,16 @@
   }
 }
 
-li[aria-label="jump jump"] div {
-    animation-name: jump-jump-animation;
+li[aria-label="flower"] div {
+    animation-name: flower-animation;
     animation-duration: 0.75s;
     animation-iteration-count: infinite;
 }
 
 
 
-
-/*******/
-/* YAY */
-/*******/
-
-@keyframes yay-animation {
+/* Selector en animatie voor 'text' element */
+@keyframes text-animation {
   0%{
     scale:1;
   }
@@ -180,72 +180,70 @@ li[aria-label="jump jump"] div {
   }
 }
 
-li[aria-label="yay"] span {
+li[aria-label="text"] span {
 	font-size:2.5rem;
 	display:inline-block;
 	transform-origin:center bottom;
-	animation-name:yay-animation;
+	animation-name:text-animation;
 	animation-duration:2s;
 	animation-iteration-count:infinite;
 	animation-play-state:paused;
     color: red;
 }
 
-li[aria-label="yay"] span:nth-of-type(1) {
+li[aria-label="text"] span:nth-of-type(1) {
 	animation-delay:0s;
 }
 
-li[aria-label="yay"] span:nth-of-type(2) {
+li[aria-label="text"] span:nth-of-type(2) {
 	animation-delay:.15s;
 }
 
-li[aria-label="yay"] span:nth-of-type(3) {
+li[aria-label="text"] span:nth-of-type(3) {
 	animation-delay:.3s;
 }
 
-li[aria-label="yay"] span:nth-of-type(4) {
+li[aria-label="text"] span:nth-of-type(4) {
 	animation-delay:0s;
 }
 
-li[aria-label="yay"] span:nth-of-type(5) {
+li[aria-label="text"] span:nth-of-type(5) {
 	animation-delay:.15s;
 }
 
-li[aria-label="yay"] span:nth-of-type(6) {
+li[aria-label="text"] span:nth-of-type(6) {
 	animation-delay:.3s;
 }
 
-li[aria-label="yay"] span:nth-of-type(7) {
+li[aria-label="text"] span:nth-of-type(7) {
 	animation-delay:0s;
 }
 
-li[aria-label="yay"] span:nth-of-type(8) {
+li[aria-label="text"] span:nth-of-type(8) {
 	animation-delay:.15s;
 }
 
-li[aria-label="yay"] span:nth-of-type(9) {
+li[aria-label="text"] span:nth-of-type(9) {
 	animation-delay:.3s;
 }
 
-li[aria-label="yay"] span:nth-of-type(10) {
+li[aria-label="text"] span:nth-of-type(10) {
 	animation-delay:0s;
 }
 
-li[aria-label="yay"] span:nth-of-type(11) {
+li[aria-label="text"] span:nth-of-type(11) {
 	animation-delay:.15s;
 }
 
 
-li[aria-label="yay"] span {
+li[aria-label="text"] span {
 	animation-play-state:running;
 }
 
 
 
-/***************/
-/* wait for it */
-/***************/
-@keyframes wait-for-it-animation {
+/* Selector en animatie voor 'jump' element */
+@keyframes jump-animation {
   0% {
     transform: translate(0, 0);
   }
@@ -275,10 +273,9 @@ li[aria-label="yay"] span {
 	}
 }
 
-/* Corrigeer de selector naar de gewenste elementen */
-li[aria-label="wait for it"] .jumpy {
-    /* Voeg de animatie toe aan de gewenste elementen */
-    animation-name: wait-for-it-animation, traag-animation;
+
+li[aria-label="jump"] .jumpy {
+    animation-name: jump-animation, traag-animation;
     animation-duration: 1s, 6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out, linear;
@@ -289,12 +286,10 @@ li[aria-label="wait for it"] .jumpy {
 
 
 
-/**************/
-/* op en neer */
-/**************/
-@keyframes op-en-neer-animation {
+/* Selector en animatie voor 'rocket' element */
+@keyframes rocket-animation {
   0% {
-		translate:0 0;
+	translate:0 0;
   }
   50% {
     translate:0 -8em;
@@ -304,21 +299,17 @@ li[aria-label="wait for it"] .jumpy {
   }
 }
 
-li[aria-label="op en neer"] div {
+li[aria-label="rocket"] div {
 	width:1em;
-	/* aspect-ratio:1; */
 	border-radius:50%;
-	/* background-color:darkorange; */
 }
 
-li[aria-label="op en neer"] div {
-  animation-duration:2s;
+li[aria-label="rocket"] div {
+    animation-duration:2s;
 	animation-iteration-count:infinite;
 	animation-timing-function:ease-in-out;
-    animation-name:op-en-neer-animation;
+    animation-name:rocket-animation;
 }
-
-
 
     </style>
     

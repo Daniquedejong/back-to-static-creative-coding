@@ -18,8 +18,6 @@
 
 <style>
 	button {
-		/* background-color: lightpink; */
-		/* color: black; */
 		border: none;
 		padding: 1em;
 		margin: 1em;
@@ -36,10 +34,7 @@
 	}
 
 	button:hover {
-		/* background-color: black; */
-		/* color: lightpink; */
-
-        --l: 65%;
+	    --l: 65%;
 	}
 
     button:focus {
